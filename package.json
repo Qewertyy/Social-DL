@@ -1,0 +1,25 @@
+{
+  "name": "social-dl",
+  "version": "1.0.0",
+  "description": "Social media downloader",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "preview": "nuxt preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@iconify-json/simple-icons": "^1.1.99",
+    "@nuxt/eslint": "^0.3.7",
+    "@nuxt/ui": "^2.15.2",
+    "h3-zod": "^0.5.3",
+    "nuxt": "^3.11.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.1.5",
+    "@nuxt/eslint-config": "^0.3.7",
+    "eslint": "^9.0.0",
+    "typescript": "5.4.5"
+  }
+}
