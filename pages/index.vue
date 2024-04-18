@@ -20,8 +20,6 @@ const state = reactive({
 })
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  event.preventDefault()
-  console.log(event.data)
   const url = event.data.url
   if (!url) {
     toast.add({ title: "error", description: 'URL is required.' })
@@ -39,10 +37,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         :icon="$colorMode.preference === 'dark' ? 'i-heroicons-moon' : 'i-heroicons-sun'" @click="toggleColorMode" />
     </template>
     <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-      <UInput color="black" variant="outline" placeholder="URL" v-model="state.url" type="text" />
-
+      <UFormGroup label="Post URL" name="url">
+        <UInput color="black" variant="outline" placeholder="URL" v-model="state.url" type="text" />
+      </UFormGroup>
       <UButton square color="black" class="w-fit" type="submit">Download</UButton>
     </UForm>
+
+
     <hr class="dark:border-gray-700">
     <p class="text-sm text-gray-700 dark:text-gray-300">
       Powered By <a target="_blank" class="text-primary-500" href="https://lexica.qewertyy.dev">LexicaAPI</a>
