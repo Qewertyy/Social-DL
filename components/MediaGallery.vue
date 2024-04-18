@@ -25,8 +25,8 @@ defineProps({
               <img v-if="media && media.type === 'image'" width="527" height="430"
                 :src="'https://proxy-ibmasyzzya-uc.a.run.app/' + media.url" alt="media" crossorigin="anonymous" class="h-auto w-full max-h-[430px] rounded-md transition-all duration-200 border-image brightness-[.8]
             hover:brightness-100 will-change-[filter] object-cover"></img>
-              <video v-else-if="media && media.type === 'video'" width="527" height="430" :src="media.url" alt="media"
-                controls crossorigin="anonymous"
+              <video v-else-if="media && media.type === 'video'" width="527" height="430"
+                :src="'https://proxy-ibmasyzzya-uc.a.run.app/' + media.url" alt="media" controls crossorigin="anonymous"
                 class="h-auto w-full max-h-[430px] rounded-md transition-all duration-200 border-image brightness-[.8] hover:brightness-100 will-change-[filter] object-cover"></video>
             </NuxtLink>
           </li>
