@@ -33,7 +33,8 @@ async function onSubmit(event: FormSubmitEvent<URLSchema>) {
     return;
   }
   const data = await res.json();
-  medias.splice(0, medias.length, ...data['content']['mediaUrls']);
+  const results = 'mediaUrls' in data['content'] ? data['content']['mediaUrls'] : data['content'];
+  medias.splice(0, medias.length, ...results);
   return medias;
 }
 </script>
