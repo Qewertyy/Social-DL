@@ -1,5 +1,5 @@
 import { useValidatedQuery, z } from "h3-zod";
-import { download } from "~/server/utils/downloader";
+import { download } from "~/server/downloader";
 
 export default eventHandler(async (event) => {
   const { platform, url } = await useValidatedQuery(event, {
@@ -7,6 +7,5 @@ export default eventHandler(async (event) => {
     url: z.string(),
   });
   const data = await download(platform, url);
-
-  return JSON.stringify(data);
+  return Response.json(data);
 });

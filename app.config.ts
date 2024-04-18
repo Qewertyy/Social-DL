@@ -21,6 +21,10 @@ export default defineAppConfig({
       popper: {
         strategy: "absolute",
       },
+    },
+    input:{
+      base:'w-full',
+      color: "text-black dark:text-white bg-white dark:bg-black",
     }
   }
 });
