@@ -25,6 +25,6 @@ export default defineAppConfig({
     input:{
       base:'w-full',
       color: "text-black dark:text-white bg-white dark:bg-black",
-    }
+    },
   }
 });

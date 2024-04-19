@@ -11,5 +11,8 @@ export default defineNuxtConfig({
         commaDangle: "never",
       },
     },
+  },
+  devServer:{
+    host:'0.0.0.0'
   }
 });
