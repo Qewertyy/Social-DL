@@ -5,8 +5,5 @@ export async function download(platform: string, url: string) {
       method: "POST",
     }
   );
-  if (response.status !== 200) {
-    return null;
-  };
-  return response.json();
+  return response;
 };
