@@ -9,5 +9,5 @@ export default eventHandler(async (event) => {
     ),
   });
   const response = await download(platform, url);
-  return event.respondWith(response);
+  return Response.json(response);
 });

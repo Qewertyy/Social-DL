@@ -5,5 +5,5 @@ export async function download(platform: string, url: string) {
       method: "POST",
     }
   );
-  return response;
+  return await response.json();
 };

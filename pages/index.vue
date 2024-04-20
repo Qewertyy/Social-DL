@@ -38,7 +38,7 @@ async function onSubmit(event: FormSubmitEvent<URLSchema>) {
     };
     const res = await fetch(`/api/download?url=${url}&platform=${platform}`, { method: 'POST' });
     const data = await res.json();
-    if (res.status !== 200) {
+    if (res.status !== 200 || 'code' in data && data['code'] !== 2) {
       loading.value = false;
       toast.add({ title: "Error", description: 'message' in data ? data['message'] : 'Failed to download.' });
       return;
