@@ -7,5 +7,5 @@ export default eventHandler(async (event) => {
     url: z.string(),
   });
   const response = await download(platform, url);
-  return response;
+  return event.respondWith(response);
 });
