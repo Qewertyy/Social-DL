@@ -6,6 +6,7 @@ export function identifyPlatform(url: string) {
     "pinterest\\.com": "Pinterest",
     "twitter\\.com": "Twitter",
     "x\\.com": "Twitter",
+    "www\\.reddit\\.com": "Reddit",
   };
   for (const domainPattern in platformMap) {
     const regex = new RegExp(`\\b(?:${domainPattern})\\b`, "i");
