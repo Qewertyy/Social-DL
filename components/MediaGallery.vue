@@ -23,10 +23,10 @@ defineProps({
           <li v-for="media in medias" ref="mansoryItem" :key="media.url" class="relative w-full group masonry-item">
             <NuxtLink target="_blank" :to="media.url" class="container-image">
               <img v-if="media && media.type === 'image'" width="527" height="430"
-                :src="media.url" alt="media" crossorigin="anonymous" class="h-auto w-full max-h-[430px] rounded-md transition-all duration-200 border-image brightness-[.8]
+                :src="'https://workers.qewertyy.dev/media?url='+media.url" alt="media" crossorigin="anonymous" class="h-auto w-full max-h-[430px] rounded-md transition-all duration-200 border-image brightness-[.8]
             hover:brightness-100 will-change-[filter] object-cover"></img>
               <video v-else-if="media && media.type === 'video'" width="527" height="430"
-                :src="media.url" alt="media" controls crossorigin="anonymous"
+                :src="'https://workers.qewertyy.dev/media?url='+media.url" alt="media" controls crossorigin="anonymous"
                 class="h-auto w-full max-h-[430px] rounded-md transition-all duration-200 border-image brightness-[.8] hover:brightness-100 will-change-[filter] object-cover"></video>
             </NuxtLink>
           </li>
